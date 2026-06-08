@@ -14,13 +14,6 @@ export default function DynamicContent({
   searchQuery = "",
   onNavigate,
 }: DynamicContentProps) {
-  // Contact Form State
-  const [contactName, setContactName] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactSubject, setContactSubject] = useState("");
-  const [contactMessage, setContactMessage] = useState("");
-  const [contactSubmitted, setContactSubmitted] = useState(false);
-
   // Review Form State (For Reviewers demo)
   const [reviewerName, setReviewerName] = useState("");
   const [reviewerRec, setReviewerRec] = useState("Accept");
@@ -28,13 +21,6 @@ export default function DynamicContent({
   const [reviewerNovelty, setReviewerNovelty] = useState("High");
   const [reviewerComments, setReviewerComments] = useState("");
   const [reviewSubmitted, setReviewSubmitted] = useState(false);
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (contactName && contactEmail && contactMessage) {
-      setContactSubmitted(true);
-    }
-  };
 
   const handleReviewSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -280,9 +266,13 @@ export default function DynamicContent({
                   <span className="font-bold text-gray-900">{editorialBoard.bm.name}</span>
                   <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.bm.affiliation}</span>
                 </div>
-                <a href={`mailto:${editorialBoard.bm.email}`} className="text-xs text-blue-600 hover:underline">
-                  {editorialBoard.bm.email}
-                </a>
+                <div className="text-right flex flex-col items-start md:items-end gap-1">
+                  {editorialBoard.bm.emails.map((email, idx) => (
+                    <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
+                      {email}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -293,9 +283,13 @@ export default function DynamicContent({
                   <span className="font-bold text-gray-900">{editorialBoard.tc.name}</span>
                   <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.tc.affiliation}</span>
                 </div>
-                <a href={`mailto:${editorialBoard.tc.email}`} className="text-xs text-blue-600 hover:underline">
-                  {editorialBoard.tc.email}
-                </a>
+                <div className="text-right flex flex-col items-start md:items-end gap-1">
+                  {editorialBoard.tc.emails.map((email, idx) => (
+                    <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
+                      {email}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -470,7 +464,7 @@ export default function DynamicContent({
                   <div>
                     <h5 className="font-semibold text-gray-800 text-xs mb-1">4.5 References</h5>
                     <p className="text-xs text-gray-600">
-                      Use a standard citation format consistently throughout. For references with multiple authors, list all authors (avoid "et al." in the reference list). Recent literature (within the last 5 years) should be well-represented.
+                      Use a standard citation format consistently throughout. For references with multiple authors, list all authors (avoid &quot;et al.&quot; in the reference list). Recent literature (within the last 5 years) should be well-represented.
                     </p>
                   </div>
 
@@ -1044,7 +1038,7 @@ export default function DynamicContent({
               Search Results
             </h3>
             <p className="text-xs text-gray-500 mb-4">
-              Showing matching elements for: <span className="font-bold text-[#0B4A8F]">"{searchQuery}"</span>
+              Showing matching elements for: <span className="font-bold text-[#0B4A8F]">&quot;{searchQuery}&quot;</span>
             </p>
             <div className="bg-gray-50 p-6 text-center border border-dashed border-gray-300 text-gray-500 text-sm">
               No matching records found. Submissions will launch soon. For scopes and topics, please consult the <span onClick={() => onNavigate("Aims & Scope")} className="text-blue-600 underline cursor-pointer font-bold">Aims & Scope</span> tab.
