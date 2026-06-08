@@ -65,6 +65,16 @@ export default function DynamicContent({
       affiliation: "Adhiparasakthi Engineering College",
       email: "thirumarai@apec.edu.in",
     },
+    bm: {
+      name: "Haris Krishnan",
+      affiliation: "Madras Engineering College",
+      emails: ["hari@gmail.com", "hari@madrascollege.ac.in"],
+    },
+    tc: {
+      name: "R.Janakiraman",
+      affiliation: "Madras Engineering College",
+      emails: ["janagiraman355@gmail.com", "janakiraman@madrascollege.ac.in"],
+    },
   };
 
   // Scope domains data
@@ -259,6 +269,32 @@ export default function DynamicContent({
                 </div>
                 <a href={`mailto:${editorialBoard.managing.email}`} className="text-xs text-blue-600 hover:underline">
                   {editorialBoard.managing.email}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Board Members</h4>
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.bm.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.bm.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.bm.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.bm.email}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Technical Commitee</h4>
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.tc.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.tc.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.tc.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.tc.email}
                 </a>
               </div>
             </div>
