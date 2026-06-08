@@ -575,19 +575,19 @@ export default function DynamicContent({
                     <tbody className="divide-y divide-gray-100 bg-white">
                       <tr>
                         <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Editorial inquiries</td>
-                        <td className="px-3 py-2 text-blue-600">editor@jfdai.org</td>
+                        <td className="px-3 py-2 text-blue-600">editorial_office@jfdai.in</td>
                       </tr>
                       <tr className="bg-gray-50/50">
                         <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Submission support</td>
-                        <td className="px-3 py-2 text-blue-600">support@jfdai.org</td>
+                        <td className="px-3 py-2 text-blue-600">editorial_office@jfdai.in</td>
                       </tr>
                       <tr>
                         <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Copyediting inquiries</td>
-                        <td className="px-3 py-2 text-blue-600">copyediting@jfdai.org</td>
+                        <td className="px-3 py-2 text-blue-600">editorial_office@jfdai.in</td>
                       </tr>
                       <tr className="bg-gray-50/50">
                         <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Fee/waiver inquiries</td>
-                        <td className="px-3 py-2 text-blue-600">accounts@jfdai.org</td>
+                        <td className="px-3 py-2 text-blue-600">editorial_office@jfdai.in</td>
                       </tr>
                     </tbody>
                   </table>
@@ -943,19 +943,19 @@ export default function DynamicContent({
                         <tbody className="divide-y divide-gray-100 bg-white">
                           <tr>
                             <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Editorial inquiries</td>
-                            <td className="px-3 py-2"><a href="mailto:editor@jfdai.org" className="text-blue-600 hover:underline">editor@jfdai.org</a></td>
+                            <td className="px-3 py-2"><a href="mailto:editorial_office@jfdai.in" className="text-blue-600 hover:underline">editorial_office@jfdai.in</a></td>
                           </tr>
                           <tr className="bg-gray-50/50">
                             <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Submission support</td>
-                            <td className="px-3 py-2"><a href="mailto:support@jfdai.org" className="text-blue-600 hover:underline">support@jfdai.org</a></td>
+                            <td className="px-3 py-2"><a href="mailto:editorial_office@jfdai.in" className="text-blue-600 hover:underline">editorial_office@jfdai.in</a></td>
                           </tr>
                           <tr>
                             <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Copyediting inquiries</td>
-                            <td className="px-3 py-2"><a href="mailto:copyediting@jfdai.org" className="text-blue-600 hover:underline">copyediting@jfdai.org</a></td>
+                            <td className="px-3 py-2"><a href="mailto:editorial_office@jfdai.in" className="text-blue-600 hover:underline">editorial_office@jfdai.in</a></td>
                           </tr>
                           <tr className="bg-gray-50/50">
                             <td className="px-3 py-2 font-semibold text-gray-800 border-r border-gray-200">Fee / waiver inquiries</td>
-                            <td className="px-3 py-2"><a href="mailto:accounts@jfdai.org" className="text-blue-600 hover:underline">accounts@jfdai.org</a></td>
+                            <td className="px-3 py-2"><a href="mailto:editorial_office@jfdai.in" className="text-blue-600 hover:underline">editorial_office@jfdai.in</a></td>
                           </tr>
                         </tbody>
                       </table>
