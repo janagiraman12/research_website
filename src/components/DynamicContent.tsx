@@ -30,36 +30,42 @@ export default function DynamicContent({
   // List of editorial board members
   const editorialBoard = {
     eic: {
-      name: "Vijayakumar Kadumbadi",
+      name: "Prof .Vijayakumar Kadumbadi",
       affiliation: "Madras Engineering College",
-      emails: ["vijayakumarkadumbadi23@gmail.com", "vijayakumar@madrascollege.ac.in"],
+      emails: ["vijayakumar@madrascollege.ac.in"],
     },
+    //associate editor in chief 1
     aes: [
       {
-        name: "Ezhilvendan Munusamy",
-        affiliation: "Panimalar Engineering College",
-        email: "vendan7@gmail.com",
+        name: "Prof .Hari Krishnan",
+        affiliation: "Madras Engineering College",
+        email: "hari@madrascollege.ac.in",
       },
       {
         name: "Sekar G",
         affiliation: "Adhiparasakthi Engineering College",
-        email: "sekar@apec.edu.in",
+        email: ["sekar@apec.edu.in"],
       },
     ],
     managing: {
-      name: "Thirumaraiselvan Pakirisamy",
+      name: "Prof .Srinivasan",
+      affiliation: "Madras Engineering College",
+      email: "Principal@madrascollege.ac.in",
+    },//editorial in chief 2
+    eic2: {
+      name: "Prof .Ezhilvendan Munusamy",
+      affiliation: "Panimalar Engineering College",
+      emails: ["mezhilvendhan@panimalar.ac.in"],
+    },
+    aec: {
+      name: "Prof .Thirumaraiselvan Pakirisamy",
       affiliation: "Adhiparasakthi Engineering College",
       email: "thirumarai@apec.edu.in",
-    },
-    bm: {
-      name: "Haris Krishnan",
-      affiliation: "Madras Engineering College",
-      emails: ["hari@gmail.com", "hari@madrascollege.ac.in"],
     },
     tc: {
       name: "R.Janakiraman",
       affiliation: "Madras Engineering College",
-      emails: ["janagiraman355@gmail.com", "janakiraman@madrascollege.ac.in"],
+      emails: ["", "janakiraman@madrascollege.ac.in"],
     },
   };
 
@@ -213,7 +219,7 @@ export default function DynamicContent({
             </h3>
 
             <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Editor-in-Chief</h4>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Editorial-in-Chief</h4>
               <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
                 <div>
                   <span className="font-bold text-gray-900 text-base">{editorialBoard.eic.name}</span>
@@ -227,10 +233,52 @@ export default function DynamicContent({
                   ))}
                 </div>
               </div>
+
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900 text-base">{editorialBoard.eic2.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.eic2.affiliation}</span>
+                </div>
+                <div className="text-right flex flex-col items-start md:items-end gap-1">
+                  {editorialBoard.eic2.emails.map((email, idx) => (
+                    <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
+                      {email}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Associate Editor in Chief</h4>
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.aec.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.aec.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.aec.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.aec.email}
+                </a>
+              </div>
             </div>
 
             <div>
               <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Associate Editors</h4>
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.managing.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.managing.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.managing.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.managing.email}
+                </a>
+              </div>
+            </div>
+
+
+            <div>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Board Members</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {editorialBoard.aes.map((ae, idx) => (
                   <div key={idx} className="bg-gray-50/50 p-3 border border-gray-100 flex flex-col justify-between gap-2">
@@ -243,53 +291,6 @@ export default function DynamicContent({
                     </a>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Managing Editor</h4>
-              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-                <div>
-                  <span className="font-bold text-gray-900">{editorialBoard.managing.name}</span>
-                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.managing.affiliation}</span>
-                </div>
-                <a href={`mailto:${editorialBoard.managing.email}`} className="text-xs text-blue-600 hover:underline">
-                  {editorialBoard.managing.email}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Board Members</h4>
-              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-                <div>
-                  <span className="font-bold text-gray-900">{editorialBoard.bm.name}</span>
-                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.bm.affiliation}</span>
-                </div>
-                <div className="text-right flex flex-col items-start md:items-end gap-1">
-                  {editorialBoard.bm.emails.map((email, idx) => (
-                    <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
-                      {email}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Technical Commitee</h4>
-              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-                <div>
-                  <span className="font-bold text-gray-900">{editorialBoard.tc.name}</span>
-                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.tc.affiliation}</span>
-                </div>
-                <div className="text-right flex flex-col items-start md:items-end gap-1">
-                  {editorialBoard.tc.emails.map((email, idx) => (
-                    <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
-                      {email}
-                    </a>
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -663,85 +664,6 @@ export default function DynamicContent({
                 </ul>
               </div>
 
-              {/* Review Evaluation Portal Simulation */}
-              <div className="border border-gray-200 p-4 rounded bg-gray-50">
-                <h4 className="font-bold text-[#0B4A8F] text-sm mb-3">✏️ Online Review Evaluation Panel</h4>
-                {reviewSubmitted ? (
-                  <div className="bg-green-50 border border-green-200 text-green-800 p-3 text-xs font-semibold">
-                    ✓ Thank you, {reviewerName || "Reviewer"}! Your review evaluation has been recorded and submitted to the Associate Editor.
-                  </div>
-                ) : (
-                  <form onSubmit={handleReviewSubmit} className="space-y-3">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-gray-600 mb-1">Reviewer Name</label>
-                        <input
-                          type="text"
-                          value={reviewerName}
-                          onChange={(e) => setReviewerName(e.target.value)}
-                          required
-                          className="w-full text-xs p-2 border border-gray-300 bg-white focus:outline-[#0B4A8F]"
-                          placeholder="Dr. Alice Smith"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-gray-600 mb-1">Recommendation</label>
-                        <select
-                          value={reviewerRec}
-                          onChange={(e) => setReviewerRec(e.target.value)}
-                          className="w-full text-xs p-2 border border-gray-300 bg-white"
-                        >
-                          <option>Accept as is</option>
-                          <option>Minor Revisions</option>
-                          <option>Major Revisions</option>
-                          <option>Reject</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-gray-600 mb-1">Technical Quality</label>
-                        <select
-                          value={reviewerQuality}
-                          onChange={(e) => setReviewerQuality(e.target.value)}
-                          className="w-full text-xs p-2 border border-gray-300 bg-white"
-                        >
-                          <option>Excellent</option>
-                          <option>Good</option>
-                          <option>Marginal</option>
-                          <option>Unacceptable</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-gray-600 mb-1">Novelty & Significance</label>
-                        <select
-                          value={reviewerNovelty}
-                          onChange={(e) => setReviewerNovelty(e.target.value)}
-                          className="w-full text-xs p-2 border border-gray-300 bg-white"
-                        >
-                          <option>High</option>
-                          <option>Moderate</option>
-                          <option>Low / None</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-gray-600 mb-1">Comments to Authors (Confidential review details)</label>
-                      <textarea
-                        value={reviewerComments}
-                        onChange={(e) => setReviewerComments(e.target.value)}
-                        required
-                        rows={4}
-                        className="w-full text-xs p-2 border border-gray-300 bg-white focus:outline-[#0B4A8F]"
-                        placeholder="Detail the strengths, weaknesses, and specific requested changes..."
-                      />
-                    </div>
-                    <button type="submit" className="px-4 py-2 bg-[#0B4A8F] hover:bg-[#2D6DB5] text-white font-bold text-xs uppercase transition-colors">
-                      Submit Review Report
-                    </button>
-                  </form>
-                )}
-              </div>
             </div>
           </section>
         )}

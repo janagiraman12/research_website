@@ -290,7 +290,7 @@ export default function ContactForm() {
                   id="jf-institution"
                   type="text"
                   autoComplete="organization"
-                  placeholder="Madras Engineering College"
+                  placeholder="Enter Your College"
                   value={fields.institution}
                   onChange={set("institution")}
                   className={inputCls()}
@@ -359,7 +359,7 @@ export default function ContactForm() {
             {/* Privacy note */}
             <p className="text-[11px] text-gray-500 leading-relaxed border-t border-gray-100 pt-4">
               By submitting this form, your message will be sent securely to the JFDAI editorial
-              office at <strong>vijayakumarkadumbadi23@gmail.com</strong>. We do not share your contact
+              office at <strong>editorial_office@jfdai.in</strong>. We do not share your contact
               details with third parties.
             </p>
 
