@@ -14,11 +14,7 @@ export default function HomeContent({ onNavigate }: HomeContentProps) {
       date: "June 4, 2026",
       desc: "The Journal of Federated and Distributed AI (JFDAI) is officially launching and open for submissions. We invite original research articles, comprehensive review papers, and AI application articles. Benefit from fast desk reviews and developmental peer review feedback.",
     },
-    {
-      title: "JFDAI Establishes Open Access Sponsorship Program",
-      date: "May 28, 2026",
-      desc: "To support early-career researchers, JFDAI is offering full APC fee waivers and discounts for its initial issues. Our goal is to encourage reproducible, sound science in decentralized learning ecosystems.",
-    },
+
   ];
 
   return (
@@ -38,7 +34,7 @@ export default function HomeContent({ onNavigate }: HomeContentProps) {
               <rect width="100%" height="100%" fill="url(#grid)" />
             </svg>
           </div>
-          
+
           <div className="z-10 flex flex-col gap-1">
             <div className="text-[9px] font-bold text-[#BFD4EA] uppercase tracking-widest border-b border-[#BFD4EA] pb-1">
               EDAS Platform
@@ -86,7 +82,6 @@ export default function HomeContent({ onNavigate }: HomeContentProps) {
               Author Guidelines
             </button>
             <button
-              onClick={() => onNavigate("Aims & Scope")}
               className="px-4 py-2 border border-[#2D6DB5] text-[#2D6DB5] hover:bg-[#2D6DB5] hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-150"
             >
               Scope details

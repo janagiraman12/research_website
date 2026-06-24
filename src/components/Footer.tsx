@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-gray-200 mt-12 py-8 text-gray-600">
       <div className="max-w-[1140px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-        
+
         {/* Left Side: Journal Name & CC License */}
         <div className="flex flex-col gap-2 max-w-xl">
           <div className="flex items-center gap-3 mb-2">
@@ -35,9 +35,7 @@ export default function Footer() {
           <div>
             ISSN: <span className="text-gray-800 font-bold">Pending (To be requested)</span>
           </div>
-          <div className="mt-3 text-[10px] text-gray-400 font-normal">
-            Designed for Desktop Compatibility (IJCDS inspired layout)
-          </div>
+
         </div>
 
       </div>

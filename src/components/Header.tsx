@@ -22,7 +22,7 @@ export default function Header({ onNavigate, onSearch }: HeaderProps) {
     <header className="w-full bg-white border-b border-gray-200">
       {/* Top Bar with Thin Line & Search */}
       <div className="w-full bg-[#0B4A8F] h-[4px]"></div>
-      
+
       {/* Search Bar Row */}
       <div className="max-w-[1140px] mx-auto px-4 py-2 flex justify-end items-center">
         <form onSubmit={handleSearchSubmit} className="flex items-center">
@@ -83,7 +83,7 @@ export default function Header({ onNavigate, onSearch }: HeaderProps) {
         {/* Right Side: Action Buttons */}
         <div className="flex flex-wrap md:flex-nowrap gap-3">
           <button
-            onClick={() => onNavigate("For Authors")}
+            onClick={() => window.open("https://jfdai.jams.pub/login", "_blank", "noopener,noreferrer")}
             className="min-w-[150px] px-4 py-3 bg-[#2D6DB5] hover:bg-[#0B4A8F] text-white font-bold text-sm tracking-wide shadow-sm transition-all duration-200 ease-in-out border border-[#2D6DB5] hover:border-[#0B4A8F] uppercase text-center"
           >
             Submit an Article

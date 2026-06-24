@@ -30,42 +30,73 @@ export default function DynamicContent({
   // List of editorial board members
   const editorialBoard = {
     eic: {
-      name: "Prof .Vijayakumar Kadumbadi",
+      name: "Prof .Vijayakumar, India",
       affiliation: "Madras Engineering College",
       emails: ["vijayakumar@madrascollege.ac.in"],
     },
-    //associate editor in chief 1
+    //associate editor
     aes: [
+
       {
-        name: "Prof .Hari Krishnan",
+        name: "Prof B.Siva kumar, India",
+        affiliation: "SRM institue of Science and Technology",
+        email: "sivakumb2@srmist.edu.in",
+      },
+      {
+        name: "Prof M.Karthikeyan, India",
+        affiliation: "Madras Engineering College",
+        email: "karthikeyan@madrascollege.ac.in",
+      },
+      {
+        name: "Prof N.Elamathi, India",
+        affiliation: "Adhiparasakthi Engineering College",
+        email: "elamathi@apec.edu.in",
+      },
+      {
+        name: "Prof A.Bhuvaneswari, India",
+        affiliation: "Adhiparasakthi Engineering College",
+        email: "bhuvaneswari@apec.edu.in",
+      },
+      {
+        name: "Prof .Hari Ramakrishnan, India",
         affiliation: "Madras Engineering College",
         email: "hari@madrascollege.ac.in",
       },
       {
-        name: "Sekar G",
+        name: "Prof G.Sekar, India",
         affiliation: "Adhiparasakthi Engineering College",
         email: ["sekar@apec.edu.in"],
       },
     ],
     managing: {
-      name: "Prof .Srinivasan",
+      name: "Prof K.Srinivasan, India",
       affiliation: "Madras Engineering College",
       email: "Principal@madrascollege.ac.in",
     },//editorial in chief 2
     eic2: {
-      name: "Prof .Ezhilvendan Munusamy",
+      name: "Prof .Ezhilvendan, India",
       affiliation: "Panimalar Engineering College",
       emails: ["mezhilvendhan@panimalar.ac.in"],
     },
     aec: {
-      name: "Prof .Thirumaraiselvan Pakirisamy",
+      name: "Prof P.Thirumaraiselvan Pakirisamy, India",
       affiliation: "Adhiparasakthi Engineering College",
       email: "thirumarai@apec.edu.in",
     },
     tc: {
-      name: "R.Janakiraman",
+      name: "R.Janakiraman, India",
       affiliation: "Madras Engineering College",
       emails: ["", "janakiraman@madrascollege.ac.in"],
+    },//advisoryboard
+    ad: {
+      name: "Prof .Shyamala Devi Munisamy, Korea",
+      affiliation: "Kyungpook National University",
+      email: "drshyamala@knu.ac.kr",
+    },
+    ad2: {
+      name: "Prof N.Jaishankar, India",
+      affiliation: "MNM Jain Engineering college ",
+      email: "dr.jai235@gmail.com",
     },
   };
 
@@ -219,7 +250,7 @@ export default function DynamicContent({
             </h3>
 
             <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Editorial-in-Chief</h4>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Editor-in-Chief</h4>
               <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
                 <div>
                   <span className="font-bold text-gray-900 text-base">{editorialBoard.eic.name}</span>
@@ -251,7 +282,7 @@ export default function DynamicContent({
             </div>
 
             <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Associate Editor in Chief</h4>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Managing Editors</h4>
               <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
                 <div>
                   <span className="font-bold text-gray-900">{editorialBoard.aec.name}</span>
@@ -264,7 +295,7 @@ export default function DynamicContent({
             </div>
 
             <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Associate Editors</h4>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Editorial Advisory Board</h4>
               <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
                 <div>
                   <span className="font-bold text-gray-900">{editorialBoard.managing.name}</span>
@@ -274,11 +305,31 @@ export default function DynamicContent({
                   {editorialBoard.managing.email}
                 </a>
               </div>
+
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.ad.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.ad.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.ad.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.ad.email}
+                </a>
+              </div>
+
+              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div>
+                  <span className="font-bold text-gray-900">{editorialBoard.ad2.name}</span>
+                  <span className="block text-xs text-gray-600 font-semibold">{editorialBoard.ad2.affiliation}</span>
+                </div>
+                <a href={`mailto:${editorialBoard.ad2.email}`} className="text-xs text-blue-600 hover:underline">
+                  {editorialBoard.ad2.email}
+                </a>
+              </div>
             </div>
 
 
             <div>
-              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Board Members</h4>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Associate Editors</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {editorialBoard.aes.map((ae, idx) => (
                   <div key={idx} className="bg-gray-50/50 p-3 border border-gray-100 flex flex-col justify-between gap-2">
@@ -291,6 +342,26 @@ export default function DynamicContent({
                     </a>
                   </div>
                 ))}
+              </div>
+            </div>
+
+
+            <div>
+              <h4 className="font-bold text-[#0B4A8F] border-l-4 border-[#2D6DB5] pl-2 mb-3">Peer Review Coordinator</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gray-50/50 p-3 border border-gray-100 flex flex-col justify-between gap-2">
+                  <div>
+                    <span className="font-bold text-gray-900">{editorialBoard.tc.name}</span>
+                    <span className="block text-xs text-gray-600">{editorialBoard.tc.affiliation}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    {editorialBoard.tc.emails.filter(Boolean).map((email, idx) => (
+                      <a key={idx} href={`mailto:${email}`} className="text-xs text-blue-600 hover:underline">
+                        {email}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
